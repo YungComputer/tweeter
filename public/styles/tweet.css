@@ -10,13 +10,20 @@
   border-style: solid;
   border-color: black;
   margin-left: 25px;
-    margin-right: 25px
+  margin-right: 25px
 }
 
+.tweet-container:hover {
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+}
+
+
 .tweet-textarea {
+  color: #545149;
   background: transparent;
   border-bottom: 2.5px solid black;
   width: 90%;
   margin:auto;
-  
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif
 }
