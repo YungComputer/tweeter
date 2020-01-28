@@ -1,0 +1,25 @@
+textarea {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2.5px solid black;
+  position: relative;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', sans-serif;
+}
+
+.button {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+  padding: 7px;
+  margin-top: 20px;
+  float: left;
+}
+
