@@ -15,6 +15,10 @@ textarea {
   color: black;
 }
 
+.counter-red {
+  color: red;
+}
+
 .button {
   background-color: #4056a1;
   color: #ffffff;
