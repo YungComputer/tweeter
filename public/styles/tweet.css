@@ -1,0 +1,22 @@
+.tweet-header {
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.tweet-container {
+  margin-top: 100px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 25px;
+    margin-right: 25px
+}
+
+.tweet-textarea {
+  background: transparent;
+  border-bottom: 2.5px solid black;
+  width: 90%;
+  margin:auto;
+  
+}

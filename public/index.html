@@ -16,13 +16,17 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -30,7 +34,7 @@
     <nav class="fixed-nav-bar">
       <span>TWEETER</span>
     </nav>
-    <header>
+    <header class="top-header">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
@@ -45,11 +49,20 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea
+            name="text"
+            placeholder="What are you humming about?"
+          ></textarea>
           <input class="button" type="submit" value="Tweet" />
           <span class="counter">140</span>
         </form>
       </section>
+      <article class="tweet-container">
+         <header class="tweet-header"></header>
+        <textarea class="tweet-textarea">This is my tweet to be posted.</textarea> 
+
+        <footer></footer>
+      </article>
     </main>
   </body>
 </html>
