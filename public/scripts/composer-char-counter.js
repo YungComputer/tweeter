@@ -1,6 +1,9 @@
 $(document).ready(function() {
+  let maxLength = 140;
   $("textarea").keypress(function() {
-    console.log(this);
+    let textLength =  maxLength - $(this).val().length;
+    // console.log(remainingLength);
+    $('.counter').text(textLength);
   });
 });
 
