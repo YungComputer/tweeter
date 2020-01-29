@@ -10,3 +10,12 @@
   padding: 1.5em;
   font-family: 'Bungee', sans-serif;
 }
+
+button {
+  float: right;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor:pointer;
+}
