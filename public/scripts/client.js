@@ -60,11 +60,26 @@ $(document).ready(function() {
   };
   getTweets();
 
+  const validateTweet = function(inputContent) {
+    if (!inputContent) {
+      alert("Tweet is not present")
+      return false;
+    } else if (inputContent.length > 140) {
+      alert("Tweet too long")
+      return false;
+    } 
+    return true;
+  }
+
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
+    const contents = $(this).find("textarea").val().trim();
+    if (!validateTweet(contents)) {
+      return
+    }
     const serializedForm = $("#tweet-form").serialize();
     $.post("/tweets/", serializedForm).done(data => {
-      getTweets();
+        getTweets();
     });
   });
 });
