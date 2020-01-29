@@ -29,7 +29,7 @@ $(document).ready(function() {
             ${tweet.content.text}
           </textarea>
           <footer class="tweet-footer">
-            <span class="date-posted">${tweet.created_at}</span>
+            <span class="date-posted">${moment(tweet.created_at).fromNow()}</span>
             <span class="twitter-icons">
               <img src="https://img.icons8.com/small/2x/retweet.png" alt="retweet
               width="20" height="20" />
@@ -52,6 +52,8 @@ $(document).ready(function() {
 
     return render;
   };
+
+  // console.log(moment());
 
   let getTweets = function() {
     $.get("/tweets").done(data => {
