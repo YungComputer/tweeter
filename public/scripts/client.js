@@ -4,8 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-$(document).ready(function() {  
+$(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const property of tweets) {
       const $tweet = createTweetElement(property);
@@ -54,22 +53,18 @@ $(document).ready(function() {
     return render;
   };
 
-  // renderTweets(tweetData);
-
   let getTweets = function() {
-    $.get('/tweets').done((data) => {
-    renderTweets(data);
-  })}
+    $.get("/tweets").done(data => {
+      renderTweets(data);
+    });
+  };
   getTweets();
-  
-$("#tweet-form").submit(function (event) {
-  event.preventDefault();
-  const serializedForm = $("#tweet-form").serialize();
-  $.post("/tweets/", serializedForm).done((data) => {
-    getTweets();
+
+  $("#tweet-form").submit(function(event) {
+    event.preventDefault();
+    const serializedForm = $("#tweet-form").serialize();
+    $.post("/tweets/", serializedForm).done(data => {
+      getTweets();
+    });
   });
-})
-
-
-
 });
