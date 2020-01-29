@@ -49,19 +49,44 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <textarea
-            name="text"
-            placeholder="What are you humming about?"
-          ></textarea>
+          <textarea name="text" placeholder="What are you humming about?" ></textarea>
           <input class="button" type="submit" value="Tweet" />
           <span class="counter">140</span>
         </form>
       </section>
       <article class="tweet-container">
-         <header class="tweet-header"></header>
-        <textarea class="tweet-textarea">This is my tweet to be posted.</textarea> 
-
-        <footer></footer>
+        <header class="tweet-header">
+          <img
+            src="https://img.icons8.com/wired/2x/human-head.png"
+            alt="head"
+            width="40"
+            height="40"
+          />
+          <span class="name">Clare</span>
+          <span class="handle">@yungcomputer</span>
+        </header>
+        <textarea class="tweet-textarea">
+          This is my tweet to be posted.
+        </textarea>
+        <footer class="tweet-footer">
+          <span class="date-posted">10 days ago</span>
+          <span class="twitter-icons">
+            <img src="https://img.icons8.com/small/2x/retweet.png" alt="retweet
+            width="20" height="20" />
+            <img
+              src="https://img.icons8.com/metro/2x/like.png"
+              alt="love"
+              width="20"
+              height="20"
+            />
+            <img
+              src="https://img.icons8.com/material/2x/empty-flag.png"
+              alt="flag"
+              width="20"
+              height="20"
+            />
+          </span>
+        </footer>
       </article>
     </main>
   </body>

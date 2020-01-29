@@ -1,6 +1,20 @@
 .tweet-header {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.name {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
   background-color: transparent;
-  margin-top: 50px;
+}
+
+.handle {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  color: lightgray;
+  background-color: transparent;
+  float: right;
 }
 
 .tweet-container {
@@ -10,20 +24,34 @@
   border-style: solid;
   border-color: black;
   margin-left: 25px;
-  margin-right: 25px
+  margin-right: 25px;
 }
 
 .tweet-container:hover {
-  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 }
-
 
 .tweet-textarea {
   color: #545149;
+  margin-top: 20px;
   background: transparent;
   border-bottom: 2.5px solid black;
   width: 90%;
-  margin:auto;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif
+  margin: auto;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.tweet-footer {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.date-posted {
+  font-size: 15px;
+  float: left;
+}
+
+.twitter-icons {
+  float: right;
 }
