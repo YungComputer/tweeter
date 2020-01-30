@@ -44,6 +44,10 @@ main {
   font-family: "Bungee", sans-serif;
 }
 
+footer {
+  padding-top: 10px;
+}
+
 /* Laptops / Desktops */
 @media only screen and (min-width: 960px) {
   main {
