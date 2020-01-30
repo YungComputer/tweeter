@@ -5,4 +5,9 @@ $(document).ready(function() {
     $(".counter").text(textLength);
     $(".counter").toggleClass("counter-red", textLength < 0); //change to red class when the count is negative
   });
+  $(".button").on("click", function() {
+    $(".counter").text(maxLength);
+    event.preventDefault();
+    $("textarea").val('');
+  })
 });
