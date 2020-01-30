@@ -12,7 +12,7 @@ $(document).ready(function() {
       btn.hide();
     }
   });
-//New tweet form appears
+//Then toggle Compose New Tweet
   btn.on("click", function(event) {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "400");

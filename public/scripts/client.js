@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const property of tweets) {
@@ -11,7 +5,7 @@ $(document).ready(function() {
       $("#tweet-container").prepend($tweet);
     }
   };
-  //Prevent the hackers
+  //Escaping Text
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -60,7 +54,6 @@ $(document).ready(function() {
   `;
     return render;
   };
-
   let getTweets = function() {
     $.get("/tweets").done(data => {
       renderTweets(data);
@@ -68,7 +61,7 @@ $(document).ready(function() {
   };
   getTweets();
 
-  //Default hide the errors
+  //Hide Errors until called
   $(".error-null").hide();
   $(".error-long").hide();
 
@@ -99,10 +92,11 @@ $(document).ready(function() {
       $.post("/tweets/", serializedForm).done(data => {
         getTweets();
       });
-      $("textarea").val('');
+      $("textarea").val("");
+      $(".counter").text(maxLength);
     }
   });
-
+  //Focus on new Tweet textarea upon toggle
   $(".new-tweet").hide();
   $("button").on("click", function() {
     $(".new-tweet").slideToggle("fast", function() {

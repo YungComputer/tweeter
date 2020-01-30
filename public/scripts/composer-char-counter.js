@@ -3,9 +3,6 @@ $(document).ready(function() {
   $("textarea").on("input", function() {
     let textLength = maxLength - $(this).val().length;
     $(".counter").text(textLength);
-    $(".counter").toggleClass("counter-red", textLength < 0); //change to red class when the count is negative
+    $(".counter").toggleClass("counter-negative", textLength < 0); //change to red class when the count is negative
   });
-  $(".button").on("click", function() {
-    $(".counter").text(maxLength);
-  })
 });

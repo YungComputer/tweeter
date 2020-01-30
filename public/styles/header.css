@@ -10,15 +10,12 @@
   color: #fff;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
-
-
-/* Laptops / Desktops: minimum width of 960px */
+/* Laptops / Desktops*/
 @media only screen and (min-width: 960px) {
   .top-header {
-    width:30%;
+    width: 30%;
     float: left;
     margin-top: 100px;
     margin-left: 20px;
   }
-  /* Write CSS rules that target small laptop screen sizes and beyond */
 }

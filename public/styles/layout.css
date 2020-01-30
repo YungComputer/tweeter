@@ -1,12 +1,9 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,16 +12,15 @@ html {
  */
 
 nav {
-  font-family: 'Bungee'
+  font-family: "Bungee";
 }
-
 
 body {
   padding-bottom: 50px;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 main {
@@ -42,19 +38,18 @@ main {
   margin-right: 10px;
   border-radius: 4px;
   display: none;
-  cursor:pointer;
+  cursor: pointer;
   background-color: #4056a1;
   color: #ffffff;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 
-
-/* Laptops / Desktops: minimum width of 960px */
+/* Laptops / Desktops */
 @media only screen and (min-width: 960px) {
-main {
-  width: 50%
-}
-body {
-  margin-top: 100px;
-}
+  main {
+    width: 50%;
+  }
+  body {
+    margin-top: 100px;
+  }
 }

@@ -11,20 +11,19 @@ textarea {
 
 .counter {
   float: right;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   color: black;
 }
 
-.counter-red {
+.counter-negative {
   color: red;
 }
 
 .button {
   background-color: #4056a1;
   color: #ffffff;
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   padding: 7px;
   margin-top: 20px;
   float: left;
 }
-
