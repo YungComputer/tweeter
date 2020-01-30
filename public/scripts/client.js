@@ -11,8 +11,15 @@ $(document).ready(function() {
       $("#tweet-container").prepend($tweet);
     }
   };
-
+  //Prevent the hackers
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   const createTweetElement = function(tweet) {
+    let tweetFromUser = tweet.content.text;
+    const safeHTML = `<p>${escape(tweetFromUser)}</p>`;
     let render = `
   <article class="tweet-container">
           <header class="tweet-header">
@@ -25,11 +32,13 @@ $(document).ready(function() {
             <span class="name">${tweet.user.name}</span>
             <span class="handle">${tweet.user.handle}</span>
           </header>
-          <textarea class="tweet-textarea">
-            ${tweet.content.text}
-          </textarea>
+          <div class="tweet-textarea">
+            ${safeHTML}
+          </div>
           <footer class="tweet-footer">
-            <span class="date-posted">${moment(tweet.created_at).fromNow()}</span>
+            <span class="date-posted">${moment(
+              tweet.created_at
+            ).fromNow()}</span>
             <span class="twitter-icons">
               <img src="https://img.icons8.com/small/2x/retweet.png" alt="retweet
               width="20" height="20" />
@@ -64,24 +73,27 @@ $(document).ready(function() {
 
   const validateTweet = function(inputContent) {
     if (!inputContent) {
-      alert("Tweet is not present")
+      alert("Tweet is not present");
       return false;
     } else if (inputContent.length > 140) {
-      alert("Tweet too long")
+      alert("Tweet too long");
       return false;
-    } 
+    }
     return true;
-  }
+  };
 
   $("#tweet-form").submit(function(event) {
     event.preventDefault();
-    const contents = $(this).find("textarea").val().trim();
+    const contents = $(this)
+      .find("textarea")
+      .val()
+      .trim();
     if (!validateTweet(contents)) {
-      return
+      return;
     }
     const serializedForm = $("#tweet-form").serialize();
     $.post("/tweets/", serializedForm).done(data => {
-        getTweets();
+      getTweets();
     });
   });
 });
