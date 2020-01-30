@@ -33,6 +33,20 @@ main {
   margin: 0 auto;
 }
 
+#top-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: none;
+  cursor:pointer;
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: 'Bungee', sans-serif;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -68,19 +68,21 @@ $(document).ready(function() {
   };
   getTweets();
 
+  //Default hide the errors
   $(".error-null").hide();
   $(".error-long").hide();
 
   const validateTweet = function(inputContent) {
     if (!inputContent) {
-      $(".error-null").slideDown("fast")
+      $(".error-null").slideDown("fast");
       return false;
     } else if (inputContent.length > 140) {
-      $(".error-long").slideDown("fast")
+      $(".error-null").slideUp("fast");
+      $(".error-long").slideDown("fast");
       return false;
     }
-    $(".error-long").slideUp("fast")
-    $(".error-null").slideUp("fast")
+    $(".error-long").slideUp("fast");
+    $(".error-null").slideUp("fast");
     return true;
   };
 

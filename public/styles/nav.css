@@ -11,11 +11,11 @@
   font-family: 'Bungee', sans-serif;
 }
 
-button {
+.nav-button {
   float: right;
   border-radius: 4px;
 }
 
-button:hover {
+.nav-button:hover {
   cursor:pointer;
 }
