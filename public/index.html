@@ -20,7 +20,10 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,7 +37,7 @@
     <!-- Top nav bar (fixed) -->
     <nav class="fixed-nav-bar">
       <span class="tweeter-title">TWEETER</span>
-      <button type="button">Write a new Tweet</button> 
+      <button type="button">Write a new Tweet</button>
     </nav>
     <header class="top-header">
       <div>
@@ -51,6 +54,8 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" method="POST" action="/tweets/">
+          <div class="error-null">Tweet is not present</div>
+          <div class="error-long">Tweet too long</div>
           <textarea
             name="text"
             placeholder="What are you humming about?"

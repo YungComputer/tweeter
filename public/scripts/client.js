@@ -58,11 +58,8 @@ $(document).ready(function() {
           </footer>
         </article>
   `;
-
     return render;
   };
-
-  // console.log(moment());
 
   let getTweets = function() {
     $.get("/tweets").done(data => {
@@ -71,14 +68,19 @@ $(document).ready(function() {
   };
   getTweets();
 
+  $(".error-null").hide();
+  $(".error-long").hide();
+
   const validateTweet = function(inputContent) {
     if (!inputContent) {
-      alert("Tweet is not present");
+      $(".error-null").slideDown("fast")
       return false;
     } else if (inputContent.length > 140) {
-      alert("Tweet too long");
+      $(".error-long").slideDown("fast")
       return false;
     }
+    $(".error-long").slideUp("fast")
+    $(".error-null").slideUp("fast")
     return true;
   };
 
@@ -98,10 +100,12 @@ $(document).ready(function() {
   });
 
   $(".new-tweet").hide();
-  $("button").on('click', function() {
+  $("button").on("click", function() {
     $(".new-tweet").slideToggle("fast", function() {
-      $(this).children().children("textarea").focus();
-    })
-  })
+      $(this)
+        .children()
+        .children("textarea")
+        .focus();
+    });
+  });
 });
-
