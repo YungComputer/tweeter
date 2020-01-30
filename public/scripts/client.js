@@ -98,9 +98,10 @@ $(document).ready(function() {
   });
 
   $(".new-tweet").hide();
-
-  $("button").on('click', function(event) {
-    $(".new-tweet").slideToggle("fast");
+  $("button").on('click', function() {
+    $(".new-tweet").slideToggle("fast", function() {
+      $(this).children().children("textarea").focus();
+    })
   })
 });
 
