@@ -96,4 +96,9 @@ $(document).ready(function() {
       getTweets();
     });
   });
+
+  $("button").on('click', function(event) {
+    $(".new-tweet").slideToggle("fast");
+  })
 });
+
