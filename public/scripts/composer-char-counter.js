@@ -7,7 +7,5 @@ $(document).ready(function() {
   });
   $(".button").on("click", function() {
     $(".counter").text(maxLength);
-    event.preventDefault();
-    $("textarea").val('');
   })
 });

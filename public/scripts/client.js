@@ -94,11 +94,13 @@ $(document).ready(function() {
       .trim();
     if (!validateTweet(contents)) {
       return;
+    } else {
+      const serializedForm = $("#tweet-form").serialize();
+      $.post("/tweets/", serializedForm).done(data => {
+        getTweets();
+      });
+      $("textarea").val('');
     }
-    const serializedForm = $("#tweet-form").serialize();
-    $.post("/tweets/", serializedForm).done(data => {
-      getTweets();
-    });
   });
 
   $(".new-tweet").hide();
