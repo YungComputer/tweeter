@@ -39,7 +39,7 @@ $(document).ready(function() {
             <span class="date-posted">${moment(
               tweet.created_at
             ).fromNow()}</span>
-            <span class="twitter-icons">
+            <div class="twitter-icons">
               <img src="https://img.icons8.com/small/2x/retweet.png" alt="retweet
               width="20" height="20" />
               <img
