@@ -19,3 +19,11 @@
 .nav-button:hover {
   cursor:pointer;
 }
+/* Mobile */
+@media only screen and (max-width: 960px) {
+  .fixed-nav-bar{
+    background-color: #db7093;
+    background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  }
+  }
+

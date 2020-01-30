@@ -31,6 +31,7 @@ main {
   width: 90%;
   background-color: #f4f1ec;
   margin: 0 auto;
+  column-count: 1;
 }
 
 #top-button {
@@ -47,6 +48,13 @@ main {
   font-family: 'Bungee', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+/* Laptops / Desktops: minimum width of 960px */
+@media only screen and (min-width: 960px) {
+main {
+  width: 50%
+}
+body {
+  margin-top: 100px;
+}
+}

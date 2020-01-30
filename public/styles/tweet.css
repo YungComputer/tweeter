@@ -47,11 +47,11 @@
   box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
 }
 
-.tweet-container:hover .handle, .tweet-container:hover .twitter-icons {
+.tweet-container:hover .handle,
+.tweet-container:hover .twitter-icons {
   visibility: visible;
   opacity: 1;
 }
-
 
 .tweet-textarea {
   color: #545149;
@@ -62,9 +62,7 @@
   margin: auto;
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
-  
 }
-
 
 .tweet-footer {
   margin-left: 70px;
@@ -76,9 +74,15 @@
   float: left;
 }
 
-.twitter-icons, .handle {
+.twitter-icons,
+.handle {
   float: right;
   visibility: hidden;
   opacity: 0;
 }
-
+/* @media only screen and (min-width: 960px) {
+   {
+    margin-left: 25px;
+    margin-top: 300px;
+  }
+} */
