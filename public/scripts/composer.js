@@ -3,7 +3,6 @@ $(document).ready(function() {
   let btn = $("#top-button");
   let navbtn = $(".nav-button");
   $(window).scroll(function() {
-    console.log($(window).scrollTop());
     if ($(window).scrollTop() > 400) {
       btn.show();
       navbtn.hide();
@@ -14,7 +13,6 @@ $(document).ready(function() {
   });
 //Then toggle Compose New Tweet
   btn.on("click", function(event) {
-    event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "400");
     $(".new-tweet").slideDown("fast");
     $(this)

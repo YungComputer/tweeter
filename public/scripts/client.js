@@ -1,21 +1,23 @@
 $(document).ready(function() {
   const renderTweets = function(tweets) {
-    for (const property of tweets) {
-      const $tweet = createTweetElement(property);
-      $("#tweet-container").prepend($tweet);
+    const tweetContainer = $("#tweet-container")
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      tweetContainer.prepend($tweet);
     }
   };
-  //Escaping Text
-  const escape = function(str) {
+
+  const escapeText = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
   const createTweetElement = function(tweet) {
     let tweetFromUser = tweet.content.text;
-    const safeHTML = `<p>${escape(tweetFromUser)}</p>`;
-    let render = `
-  <article class="tweet-container">
+    const safeHTML = `<p>${escapeText(tweetFromUser)}</p>`;
+    return `
+      <article class="tweet-container">
           <header class="tweet-header">
             <img
               src= ${tweet.user.avatars}
@@ -30,9 +32,9 @@ $(document).ready(function() {
             ${safeHTML}
           </div>
           <footer class="tweet-footer">
-            <span class="date-posted">${moment(
-              tweet.created_at
-            ).fromNow()}</span>
+            <span class="date-posted">
+            ${moment(tweet.created_at).fromNow()}
+            </span>
             <div class="twitter-icons">
               <img src="https://img.icons8.com/small/2x/retweet.png" alt="retweet
               width="20" height="20" />
@@ -52,7 +54,6 @@ $(document).ready(function() {
           </footer>
         </article>
   `;
-    return render;
   };
   let getTweets = function() {
     $.get("/tweets").done(data => {
@@ -93,7 +94,7 @@ $(document).ready(function() {
         getTweets();
       });
       $("textarea").val("");
-      $(".counter").text(maxLength);
+      $(".counter").text(140);
     }
   });
   //Focus on new Tweet textarea upon toggle
