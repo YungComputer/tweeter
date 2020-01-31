@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Desktop layout to Tablet and Mobile layout"] (#)
-!["Posting a Tweet"] (#)
-!["Screenshot of Tweet Box"] (https://github.com/YungComputer/tweeter/blob/master/docs/tweet-box.png)
+!["Desktop layout to Tablet and Mobile layout"](https://github.com/YungComputer/tweeter/blob/master/docs/desktop-to-mobile.gif)
+!["Posting a Tweet"](https://github.com/YungComputer/tweeter/blob/master/docs/posting-tweet.gif)
+!["Screenshot of Tweet Box"](https://github.com/YungComputer/tweeter/blob/master/docs/tweet-box.png)
 
 ## Getting Started
 
